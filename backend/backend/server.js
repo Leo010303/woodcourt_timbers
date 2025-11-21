@@ -6,7 +6,16 @@ const fs = require('fs');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:5173', 
+    'https://woodcourt-timbers-frontend.onrender.com',  // Your production frontend
+    'https://woodcourt-timbers-frontend.vercel.app',    // If you use Vercel
+    'https://woodcourt-timbers.netlify.app'             // If you use Netlify
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Ensure uploads folder exists
