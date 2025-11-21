@@ -6,16 +6,28 @@ const fs = require('fs');
 const cors = require('cors');
 
 const app = express();
+
+// Define allowed origins
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:5173',
+  'https://woodcourt-timbers-frontend.onrender.com'
+];
+
+// Use CORS middleware
 app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:5173', 
-    'https://woodcourt-timbers-frontend.onrender.com',  // Your production frontend
-    'https://woodcourt-timbers-frontend.vercel.app',    // If you use Vercel
-    'https://woodcourt-timbers.netlify.app'             // If you use Netlify
-  ],
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or Postman)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
+
 app.use(express.json());
 
 // Ensure uploads folder exists
