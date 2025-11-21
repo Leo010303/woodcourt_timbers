@@ -1,0 +1,42 @@
+[
+  {
+    "id": 2,
+    "name": "Gum Poles",
+    "price": "$8 per pole",
+    "description": "Durable gum poles for fencing and structural support",
+    "images": []
+  },
+  {
+    "id": 3,
+    "name": "Hardwood Timber",
+    "price": "$18 per meter",
+    "description": "Premium hardwood for durable construction projects",
+    "images": []
+  },
+  {
+    "id": 4,
+    "name": "Roof Trusses",
+    "price": "$45 each",
+    "description": "Pre-made roof trusses for quick installation",
+    "images": []
+  },
+  {
+    "id": 1763486195527,
+    "name": "PINE TRUNKS",
+    "price": "$5 per meter",
+    "description": "pink",
+    "images": []
+  },
+  {
+    "id": 1763729420881,
+    "name": "4by4 tree",
+    "price": "$19 per meter",
+    "description": "fine tree"
+  },
+  {
+    "id": 1763729420900,
+    "name": "4by4 tree",
+    "price": "$19 per meter",
+    "description": "fine tree"
+  }
+]
